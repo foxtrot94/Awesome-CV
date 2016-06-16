@@ -541,6 +541,19 @@
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
     \ifempty{#2#3}
+      {\entrytitlestyle{#1} & \entrydatestyle{#4} \\}
+      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+  \end{tabular*}%
+}
+
+\newcommand*{\cvproject}[5]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \ifempty{#2#3}
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
@@ -619,6 +632,37 @@
   \end{itemize}
   \end{justify}
   \vspace{-4.0mm}
+}
+
+%Define an environment for the summary!
+\newenvironment{cvsummary}{%
+  \vspace{-1.0mm}
+  \small
+  \begin{justify}
+  \begin{itemize}[nosep,noitemsep,leftmargin=2.5mm]
+  	\renewcommand{\labelitemi}{}
+}{%
+  \end{itemize}
+  \end{justify}
+}
+
+% Simple line in summary
+\newcommand*{\simpleline}[1]{
+	#1
+}
+
+\newcommand*{\boldline}[1]{
+	{\color{darktext}\textbf{#1}}
+}
+
+% Line with qualifier and then list
+\newcommand*{\collection}[2]{
+	{\color{darktext}\textbf{#1}:} \bodyfontlight#2
+}
+
+% List of tech
+\newcommand*{\technologies}[1]{
+	\collection{Technologies}{\boldline{#1}}
 }
 
 
