@@ -130,9 +130,9 @@
 \definecolor{blue}{HTML}{6CE0F1}
 % Text colors
 \definecolor{darktext}{HTML}{414141}
-\colorlet{text}{darkgray}
-\colorlet{graytext}{gray}
-\colorlet{lighttext}{lightgray}
+\colorlet{text}{black}
+\colorlet{graytext}{darkgray}
+\colorlet{lighttext}{gray}
 % Awesome colors
 \definecolor{awesome-emerald}{HTML}{00A388}
 \definecolor{awesome-skyblue}{HTML}{0395DE}
@@ -229,15 +229,15 @@
 % For elements of entry
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text} #1}} % Font size is slightly bigger to visually compensate for bodyfontlight
+\newcommand*{\entrydatestyle}[1]{{\fontsize{11pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\descriptionstyle}[1]{{\fontsize{11pt}{1em}\bodyfontlight\upshape\color{text} #1}} % Font size is slightly bigger to visually compensate for bodyfontlight
 
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
 \newcommand*{\subentrypositionstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\subentrydatestyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\subentrylocationstyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\subentrydatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\subentrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 \newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of honor

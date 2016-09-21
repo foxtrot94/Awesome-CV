@@ -2,7 +2,7 @@
 SUBJECT:=jefz
 
 resume:
-	cd $(CURDIR)/$(SUBJECT)/; xelatex resume.tex;
+	cd "$(CURDIR)"/"$(SUBJECT)"/; xelatex resume.tex;
 	cd ..
 
 test:
