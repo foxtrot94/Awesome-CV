@@ -12,6 +12,9 @@
 *.dvi
 *-converted-to.*
 <<<<<<< HEAD
+*.fuse_hidden*
+*.fdb_latexmk
+*.synctex*
 
 ### Editor ###
 ## Vim & Emacs temp files:
@@ -25,3 +28,4 @@
 # Archive files
 /PreviousResume
 PreviousResume.7z
+*.old

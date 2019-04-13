@@ -119,6 +119,7 @@
 % Gray-scale colors
 \definecolor{white}{HTML}{FFFFFF}
 \definecolor{black}{HTML}{000000}
+\definecolor{lightblack}{HTML}{121212}
 \definecolor{darkgray}{HTML}{333333}
 \definecolor{gray}{HTML}{5D5D5D}
 \definecolor{lightgray}{HTML}{999999}
@@ -129,13 +130,15 @@
 \definecolor{red}{HTML}{FB4485}
 \definecolor{blue}{HTML}{6CE0F1}
 % Text colors
-\definecolor{darktext}{HTML}{414141}
-\colorlet{text}{darkgray}
-\colorlet{graytext}{gray}
-\colorlet{lighttext}{lightgray}
+\colorlet{darktext}{black}
+\colorlet{text}{lightblack}
+\colorlet{graytext}{darkgray}
+\colorlet{lighttext}{gray}
 % Awesome colors
 \definecolor{awesome-emerald}{HTML}{00A388}
 \definecolor{awesome-skyblue}{HTML}{0395DE}
+\definecolor{awesome-electricblue}{HTML}{3137FD}
+\definecolor{awesome-lightblue}{HTML}{00AAE4}
 \definecolor{awesome-red}{HTML}{DC3522}
 \definecolor{awesome-pink}{HTML}{EF4089}
 \definecolor{awesome-orange}{HTML}{FF6138}
@@ -143,6 +146,7 @@
 \definecolor{awesome-concrete}{HTML}{95A5A6}
 \definecolor{awesome-darknight}{HTML}{131A28}
 \colorlet{awesome}{awesome-red} % This variable may be overwritten in .TeX files
+\colorlet{awesome-too}{awesome-lightblue}
 
 % Boolean value to switch section color highlighting
 \newbool{acvSectionColorHighlight}
@@ -217,28 +221,28 @@
 \newcommand*{\headerfirstnamestyle}[1]{\textbf{\fontsize{32pt}{1em}\headerfontlight\color{darkgray} #1}}
 \newcommand*{\headerlastnamestyle}[1]{\textbf{\fontsize{32pt}{1em}\headerfontlight\color{darkgray} #1}}
 % \newcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
-\newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\scshape\color{awesome} #1}}
-\newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
+\newcommand*{\headerpositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\scshape\color{awesome} #1}}
+\newcommand*{\headeraddressstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\scshape\color{lighttext} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
 \newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{awesome} #1}}
-\newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
-\newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
+\newcommand*{\subsectionstyle}[1]{{\fontsize{0pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
+\newcommand*{\paragraphstyle}{\fontsize{0pt}{1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{text} #1}}
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text} #1}} % Font size is slightly bigger to visually compensate for bodyfontlight
 
 % For elements of subentry
-\newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
-\newcommand*{\subentrypositionstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\subentrydatestyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\subentrytitlestyle}[1]{{\fontsize{80pt}{1em}\bodyfont\mdseries\color{text} #1}}
+\newcommand*{\subentrypositionstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\subentrydatestyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\color{text} #1}}
 \newcommand*{\subentrylocationstyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
-\newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\subdescriptionstyle}[1]{{\fontsize{18pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of honor
 \newcommand*{\honortitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
@@ -379,11 +383,11 @@
 \newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\acvHeaderAfterSocialSkip}{6mm}
+\newcommand{\acvHeaderAfterSocialSkip}{0mm}
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{2mm}
+\newcommand{\acvSectionTopSkip}{0mm}
 \newcommand{\acvSectionContentTopSkip}{-1mm}
 
 
@@ -411,8 +415,10 @@
   \begin{center}
     \headerfirstnamestyle{\@firstname}\headerlastnamestyle{{}\acvHeaderNameDelim\@lastname}%
     \\[\acvHeaderAfterNameSkip]%
-    \ifthenelse{\isundefined{\@position}}{}{\headerpositionstyle{\@position\\[\acvHeaderAfterPositionSkip]}}%
-    \ifthenelse{\isundefined{\@address}}{}{\headeraddressstyle{\@address\\[\acvHeaderAfterAddressSkip]}}%
+    \ifthenelse{\isundefined{\@position}}{}{\headerpositionstyle{\@position}}%
+    \ 
+    \ifthenelse{\isundefined{\@address}}{}{\headeraddressstyle{\@address}}%
+    \\[\acvHeaderAfterAddressSkip]
     \headersocialstyle{%
       \newbool{isstart}%
       \setbool{isstart}{true}%
@@ -546,6 +552,7 @@
       \entrypositionstyle{#1} &  \entrydatestyle{#4} \\}
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
+  \vspace{1.0mm}
 }
 
 \newcommand*{\cvproject}[5]{%
@@ -559,6 +566,7 @@
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
+  \vspace{10.0mm}
 }
 
 % Define an environment for cvsubentry
@@ -605,8 +613,8 @@
 
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-2.0mm}
+  %\vspace{\acvSectionContentTopSkip}
+  %\vspace{-2.0mm}
   \begin{center}
     \setlength\tabcolsep{1ex}
     \setlength{\extrarowheight}{0pt}
@@ -623,20 +631,21 @@
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
-  \vspace{-4.0mm}
+  \vspace{-4.5mm}
   \begin{justify}
   \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
     \setlength{\parskip}{0pt}
+    \color{darkgray}
     \renewcommand{\labelitemi}{\bullet}
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{-4.0mm}
+  \vspace{-6.0mm}
 }
 
 %Define an environment for the summary!
 \newenvironment{cvsummary}{%
-  \vspace{-1.0mm}
+  \vspace{-2.0mm}
   \small
   \begin{justify}
   \begin{itemize}[nosep,noitemsep,leftmargin=2.5mm]
@@ -648,7 +657,7 @@
 
 % Simple line in summary
 \newcommand*{\simpleline}[1]{
-	#1
+	{\color{awesome}\textbf{#1}}
 }
 
 \newcommand*{\boldline}[1]{
@@ -657,12 +666,12 @@
 
 % Line with qualifier and then list
 \newcommand*{\collection}[2]{
-	{\color{darktext}\textbf{#1}:} \bodyfontlight#2
+	{\color{darktext}\textbf{#1}:} \bodyfontlight\color{text}#2
 }
 
 % List of tech
 \newcommand*{\technologies}[1]{
-	\collection{Technologies}{\boldline{#1}}
+	\collection{Technologies}{\boldline{\color{text}#1}}
 }
 
 
